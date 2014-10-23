@@ -83,16 +83,28 @@ function current_directory_path() {
 
 #################### manipulate string functions ####################
 
+# $ format_string 'your %s is %s' rank 17
+# => your rank is 17
 function format_string() {
-    # TODO
+    local string=$1
+    shift
+    printf "${string}\n" ${*}
 }
 
+# $ reverse_string test
+# => tset
 function reverse_string() {
-    # TODO
+    echo $1 | rev
 }
 
-function sort_string() {
-    # TODO
+# $ tokenize 'hello world'
+# => hello
+# => world
+function tokenize() {
+    local tokens=($1)
+    for token in ${tokens[*]}; do
+        echo $token
+    done
 }
 
 
