@@ -117,3 +117,64 @@ function prepend_path() {
     path_remove $1
     export PATH="$1:$PATH"
 }
+
+
+
+
+
+#################### decorated echo functions ####################
+
+# blue (34)
+function echo_primary() {
+    echo -e "\033[0;34m${*}\033[0;39m"
+}
+
+# green (32)
+function echo_success() {
+    echo -e "\033[0;32m${*}\033[0;39m"
+}
+
+# cyan (36)
+function echo_info() {
+    echo -e "\033[0;36m${*}\033[0;39m"
+}
+
+# yellow (33)
+function echo_warning() {
+    echo -e "\033[0;33m${*}\033[0;39m"
+}
+
+# red (31)
+function echo_danger() {
+    echo -e "\033[0;31m${*}\033[0;39m"
+}
+
+# bold (1)
+function echo_emphasis() {
+    echo -e "\033[1;30m${*}\033[0;39m"
+}
+
+# blue (34) bold (1)
+function echo_primary_emphasis() {
+    echo -e "\033[1;34m${*}\033[0;39m"
+}
+
+# green (32) bold (1)
+function echo_success_emphasis() {
+    echo -e "\033[1;32m${*}\033[0;39m"
+}
+
+# cyan (36) bold (1)
+function echo_info_emphasis() {
+    echo -e "\033[1;36m${*}\033[0;39m"
+}
+
+# yellow (33) bold (1)
+function echo_warning_emphasis() {
+    echo -e "\033[1;33m${*}\033[0;39m"
+}
+
+# red (31) bold (1)
+function echo_danger_emphasis() {
+    echo -e "\033[1;31m${*}\033[0;39m"
+}
