@@ -100,11 +100,30 @@ function reverse_string() {
 # $ tokenize 'hello world'
 # => hello
 # => world
-function tokenize() {
+function tokenize_string() {
     local tokens=($1)
     for token in ${tokens[*]}; do
         echo $token
     done
+}
+
+# $ join_string , this is joined string
+# => this,is,joined,string
+# separator is only char allowed
+function join_string() {
+    local separator=$1
+    shift
+    local arr=("$@")
+    echo "$(IFS=${separator} eval 'str="${arr[*]}"' && echo $str)"
+}
+
+# $ split_string , this,is,splited,string
+# => this is splited string
+# separator is only char allowed
+function split_string() {
+    local separator=$1
+    shift
+    echo "$(IFS=${separator} eval 'str=($@)' && echo ${str[@]})"
 }
 
 
