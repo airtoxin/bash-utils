@@ -145,6 +145,38 @@ Add PATH to front of $PATH
 
 
 ###Decorated echo functions
-These functions echo colorized or bolded strings.
+These functions print colorized or bolded strings.
+Color naming reference is [bootstrap](http://getbootstrap.com/css/)
 
-####echo_primary {STRS}...
+####echo_primary {STR}
+Print STR in blue.
+
+####echo_success {STR}
+Print STR in green.
+
+####echo_info {STR}
+Print STR in light blue
+
+####echo_warning {STR}
+Print STR in yellow.
+
+####echo_danger {STR}
+Print STR in red.
+
+####echo_emphasis {STR}
+Print bold STR.
+
+####echo_primary_emphasis {STR}
+Print bold STR in blue.
+
+####echo_success_emphasis {STR}
+Print bold STR in green.
+
+####echo_info_emphasis {STR}
+Print bold STR in light blue
+
+####echo_warning_emphasis {STR}
+Print bold STR in yellow.
+
+####echo_danger_emphasis {STR}
+Print bold STR in red.
