@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#################### condition functions ####################
+#################### conditional functions ####################
 
 # $ equal "hoge" "hoge"; echo $?
 # => 0 (true)
