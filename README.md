@@ -16,6 +16,12 @@ Add line on your bash script.
 ###Conditional functions
 These functions returns no string and exit code __0__ or __another numbers__.
 It can be use in conditional expression in if-statement.
+```bash
+if not_equal a b; then
+    echo true
+fi
+# => true
+```
 
 ####equal {ARG1} {ARG2}
 If ARG1 and ARG2 is equal, function exit with 0.
